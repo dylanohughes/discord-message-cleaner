@@ -16,7 +16,7 @@ Sometimes, Discord Community Managers or Administrators wish to cleanup a Discor
 6. The application will start cleaning up the target Discord channel.
 
 # Configuration
-The following fields are found within the `config.yml` file in the same directory where the `.jar` file is located after first startup.
+The following fields can be found within the `config.yml` file in the same directory where the `.jar` file is located after first startup.
 - `bot_token` - The token which allows the application to login as a Discord bot. See [this guide](https://www.writebots.com/discord-bot-token/]) on how to create and add a bot to your Discord server.
     - The bot account requires the following permissions: `Read Message History`, `Manage Messages`, or alternatively, these can be set for an individual channel when the bot has joined the server.
 - `guild_id` - The target guild ID (snowflake) which contains the channel to clean up.
