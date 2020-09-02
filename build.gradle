@@ -1,0 +1,33 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.4.0"
+}
+
+group "me.dylodius"
+version "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile "org.slf4j:slf4j-api:1.7.25"
+    compile "org.slf4j:slf4j-simple:1.7.30"
+    compile ("net.dv8tion:JDA:4.2.0_192") {
+        exclude module: 'opus-java'
+    }
+    compile "org.yaml:snakeyaml:1.26"
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "me.dylodius.discordmessagecleaner.MainKt"
+    }
+
+    from {
+        configurations.compile.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+
+    archiveFileName = "discord-message-cleaner.jar"
+}

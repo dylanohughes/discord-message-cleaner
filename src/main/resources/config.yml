@@ -1,0 +1,7 @@
+bot_token: abc
+guild_id: 111111111111111111
+channel_id: 111111111111111111
+cleanup_words:
+  - word1
+  - word2
+  - word3
